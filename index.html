@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<head>
+		<title>Lunar Lander</title>
+	</head>
+	<body>
+		<div id="homeScreen" class="active screen">
+			<div class="menu">
+				<div class="title">RE-ENTRY</div>
+				<button type="button" id="newGameButton">New Game</button>
+				<button type="button" id="highScoresButton">High Scores</button>
+				<button type="button" id="controlsButton">Controls</button>
+				<button type="button" id="creditsButton">Credits</button>
+			</div>
+		</div>
+		<div id="gameScreen" class="screen">
+			<canvas id="canvas" height=500 width=500></canvas>
+			<button type="button" id="gameToHomeButton">Quit</button>
+		</div>
+		<div id="highScoresScreen" class="screen">
+			<div class="subtitle">High Scores</div>
+			<table id="highScoresTable"></table>
+			<button type="button" id="highScoresToHomeButton">Back</button>
+		</div>
+		<div id="controlsScreen" class="screen">
+			<div class="subtitle">Controls</div>
+			<table id="controlsTable">
+				<tr>
+					<td>Thrust</td>
+					<td><button type="button" id="thrustControl"></button></td>
+				</tr>
+				<tr>
+					<td>Rotate Clockwise</td>
+					<td><button type="button" id="clockwiseControl"></button></td>
+				</tr>
+				<tr>
+					<td>Rotate Counterclockwise</td>
+					<td><button type="button" id="counterclockwiseControl"></button></td>
+				</tr>
+				<tr>
+					<td>Zoom In</td>
+					<td><button type="button" id="zoomInControl"></button></td>
+				</tr>
+				<tr>
+					<td>Zoom Out</td>
+					<td><button type="button" id="zoomOutControl"></button></td>
+				</tr>
+				<tr>
+					<td>Toggle Vectors</td>
+					<td><button type="button" id="vectorControl"></button></td>
+				</tr>
+			</table>
+			<button type="button" id="controlsToHomeButton">Back</button>
+		</div>
+		<div id="creditsScreen" class="screen">
+			<div class="subtitle">Credits</div>
+			<p>Created by Garrett Johnson for CS 5410.</p>
+			<button type="button" id="creditsToHomeButton">Back</button>
+		</div>
+		<script>
+			LunarLander = {
+				screens: {},
+				game: {
+					pixelsPerMeter: 20
+				}
+			};
+			Random = {}
+		</script>
+		<script type="text/javascript" src="scripts/random.js"></script>
+		<script type="text/javascript" src="scripts/inputManager.js"></script>
+		<script type="text/javascript" src="scripts/audioManager.js"></script>
+		<script type="text/javascript" src="scripts/sounds.js"></script>
+		<script type="text/javascript" src="scripts/particleHandler.js"></script>
+		<script type="text/javascript" src="scripts/terrain.js"></script>
+		<script type="text/javascript" src="scripts/lander.js"></script>
+		<script type="text/javascript" src="scripts/levels.js"></script>
+		<script type="text/javascript" src="scripts/gameLoop.js"></script>
+		<script type="text/javascript" src="scripts/controls.js"></script>
+		<script type="text/javascript" src="scripts/screens.js"></script>
+	</body>
+</html>
